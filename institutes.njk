@@ -1,0 +1,23 @@
+---
+layout: base.njk
+section: institutes
+permalink: /institutes/
+title: Institutes
+---
+<div class="page">
+  <div class="titlepage" style="padding-bottom:0;">
+    <h1 class="volume" style="font-size:50px;">Institutes</h1>
+    <p class="byline">Practical notes on land law for LLB &amp; GDL students</p>
+    <div class="ruler"><span class="motif">&#10086;</span></div>
+  </div>
+  <p class="introduction">The black-letter essentials of each topic, set out plainly: the governing statute, the cases that actually matter, and the traps that cost marks. Written to be read the week before an exam.</p>
+  <div style="height:34px;"></div>
+  <div class="note-grid">
+    {% for n in collections.institutes %}
+    <div class="topic">
+      <h3><a href="{{ n.url }}">{{ n.data.title }}</a></h3>
+      <p>{{ n.data.summary }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>

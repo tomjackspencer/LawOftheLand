@@ -1,0 +1,6 @@
+# Deploy settings for Netlify or Cloudflare Pages.
+# Build command: npx @11ty/eleventy
+# Publish/output directory: _site
+[build]
+  command = "npx @11ty/eleventy"
+  publish = "_site"

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+section: institutes
+---
+<article>
+  <div class="page">
+    <div class="colophon">
+      <p class="work">{{ title }}</p>
+      <p class="kind">Institutes &#183; Notes for Students</p>
+      <p class="author">{{ site.title }}</p>
+      <p class="when">Land Law</p>
+    </div>
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+    {% if reviewed %}<p class="reviewed">Reviewed as at {{ reviewed | readableDate }}</p>{% endif %}
+    <div class="prose"><a class="back" href="/institutes/">Back to the Institutes</a></div>
+  </div>
+</article>
