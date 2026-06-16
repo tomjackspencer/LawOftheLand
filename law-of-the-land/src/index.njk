@@ -1,0 +1,24 @@
+---
+layout: base.njk
+section: essays
+---
+<div class="page">
+  <div class="titlepage">
+    <h1 class="volume">{{ site.title }}</h1>
+    <p class="byline">{{ site.byline }}</p>
+    <div class="ruler"><span class="motif">&#10086;</span></div>
+    <p class="introduction">{{ site.intro }}</p>
+  </div>
+  <h2 class="section-head">Latest Writing</h2>
+  <div class="rule-double"></div>
+  <div class="essays">
+    {% for p in collections.writing %}
+    <div class="entry">
+      <p class="cat">{{ p.data.category }}</p>
+      <h3><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
+      <p class="date">{{ p.date | readableDate }}</p>
+      <p class="dek">{{ p.data.dek }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+---
+layout: base.njk
+bodyClass: lead-cap
+---
+<article>
+  <div class="page">
+    <div class="colophon">
+      <p class="work">{{ title }}</p>
+      <p class="kind">{% if type == 'casenote' %}A Case Note{% else %}An Essay{% endif %}</p>
+      <p class="author">{{ site.title }}</p>
+      <p class="when">{{ date | readableDate }}</p>
+    </div>
+    <div class="prose">
+      {{ content | safe }}
+      <a class="back" href="{% if type == 'casenote' %}/case-notes/{% else %}/essays/{% endif %}">Return to the contents</a>
+    </div>
+  </div>
+</article>
